@@ -32,17 +32,27 @@ now, we adjust (train) the values of m and b until we minimize this sum!
 
 this process, of iteratively optimizing some value or parameter is called _gradient descent_, and is a ubiquitous technique within machine learning, including _deep learning_. 
 
-let's think about gradient descent geometrically - imagine standing on some turbulent 3d landscape (maybe at the top of a hill), with the goal of reaching the lowest elevation possible. to do so algorithmically, you need to take a step in some downward direction - hence the name. there are problems 
+let's think about gradient descent geometrically - imagine a point on a turbulent geometric shape in 3d space:
+
+<img src="./gradient-descent">
+
+To reach the local minimum value algorithmically, you must steps toward a downward direction. but what if the topology is has descents of varying steepness? how do you know in what direction to step toward? this problems 
 
 
 ### Linear Regression assumptions
-like all machine learning models, linear regression doesn't work in all situations, and will either perform poorly or excel, depending on how many of its assumptions are satisfied:
+like all machine learning models, linear regression doesn't work in all situations, and its performance is based its assumptions. you can basically think of these assumptions as 'requirements' for linear regression to work effectively:
 
-- linear relationship
+- **Linearity:** there is a linear relationship between the dependant variable and the independant variable
+- **Normality:** your variables are distributed normally - think bell curves
+- **No multicollinearity:** your independant variables should not be able to be predicted by eachother
+- **No auto-correlation:** Auto-correlation means that a variable depends on itself or some 
+- **Homoscedasticity:** is an unnecessarily flashy word that means the errors (refer to figure 1) have a constant variance for each value of the independant variable
 
 
-
-
+other things to keep in mind:
+- Extrapolation beyond LR models are subject to uncertainty
+- Avoid spurious correlations with prior logical reasoning for why two variables may be functionally related
+- outliers or extreme values may throw off a regression line calculated with certain methods
 
 
 
