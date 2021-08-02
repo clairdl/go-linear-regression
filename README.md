@@ -34,7 +34,7 @@ this process, of iteratively optimizing some value or parameter is called _gradi
 
 let's think about gradient descent geometrically - imagine a point on a turbulent geometric shape in 3d space:
 
-<img src="./gradient-descent">
+<img src="./gradient-descent.jpg">
 
 To reach the local minimum value algorithmically, you must steps toward a downward direction. but what if the topology is has descents of varying steepness? how do you know in what direction to step toward? this problems 
 
@@ -50,9 +50,9 @@ like all machine learning models, linear regression doesn't work in all situatio
 
 
 other things to keep in mind:
-- Extrapolation beyond LR models are subject to uncertainty
-- Avoid spurious correlations with prior logical reasoning for why two variables may be functionally related
-- outliers or extreme values may throw off a regression line calculated with certain methods
+- Extrapolation is super unpredictable
+- Avoid spurious correlations by reasoning for why two variables may be functionally related
+- Outliers may throw off regression lines
 
 
 
