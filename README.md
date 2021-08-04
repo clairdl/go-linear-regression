@@ -1,28 +1,23 @@
 # Regression in Go
 
-breifly, regression is the process of analysing and statistically modelling a relationship between variables, allowing us to predict new values.
+breifly, regression is the process of analysing and statistically modelling the relationship between variables (by drawing a curve through the data points), and predicting new values.
 
-it's important to note that regression techniques are concerned with predicting continous values (stock prices, temperature), as opposed to a discreet set of categories (cat/dog/fish, red/blue/green).
+nb: regression techniques are concerned with predicting continous values, as opposed to a discreet set of categories.
 
-_linear regression_, then, is a simple yet fundamental regression model, utilised in other models:
+_linear regression_, then, is a simple yet fundamental model:
 
-we model the dependant variable y by an independant variable x using the following equation:
+we model the dependant variable (DV) y by an independant variable (IV) x using the following equation:
 
 ## y = mx + b
 
-where m is the slope of the line and b is the intercept
+where m is the slope of the line and b is the y intercept
 
+we know x and y from our dataset, so how do we find m and b? the most common method is called 'ordinary least squares' (OLS):
 
-for example, if we wanted to model ice cream sales with temperature, it would be as follows:
+1. choose, or randomise values for both m and b, to create an example line
+2. measure the vertical distance between each data point and the example line. these distances are called 'errors'
 
-ice cream sales = m * (temperature) + b
-
-so how do we find m and b? there are a few, but we'll use the more common 'ordinary least squares' (OLS) method:
-
-1. the first step is to choose or randomise values for both m and b, to create an example line
-2. then, we measure the vertical distance between each known point and the example line. these distances are called 'errors'
-
-<img src="./ols.png">
+<img src="./docs/ols.png">
 
 3. next, we sum the squares of these errors:
 
@@ -34,9 +29,9 @@ this process, of iteratively optimizing some value or parameter is called _gradi
 
 let's think about gradient descent geometrically - imagine a point on a turbulent geometric shape in 3d space:
 
-<img src="./gradient-descent.jpg">
+<img src="./docs/gradient-descent.jpg">
 
-To reach the local minimum value algorithmically, you must steps toward a downward direction. but what if the topology is has descents of varying steepness? how do you know in what direction to step toward? this problems 
+To reach the local minimum value algorithmically, you must steps toward a downward direction. but what if the topology has descents of varying steepness? how do you know in what direction to step toward? this problems 
 
 
 ### Linear Regression assumptions
@@ -53,11 +48,6 @@ other things to keep in mind:
 - Extrapolation is super unpredictable
 - Avoid spurious correlations by reasoning for why two variables may be functionally related
 - Outliers may throw off regression lines
-
-
-
-
-
 
 
 
