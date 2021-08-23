@@ -1,67 +1,41 @@
-# Regression in Go
+# Regression in go
 
-breifly, regression is the process of analysing and statistically modelling the relationship between variables (by drawing a curve through the data points), and predicting new values.
+### Intro
 
-nb: regression techniques are concerned with predicting continous values, as opposed to a discreet set of categories.
+Regression is the process of statistically modelling the relationship between _n_ variables from known data points, which enables us to predict unknown values. Regression techniques are generally concerned with predicting continous values, as opposed to a discreet set of categories.
 
-_linear regression_, then, is a simple yet fundamental model:
+### Linear regression
 
-we model the dependant variable (DV) y by an independant variable (IV) x using the following equation:
+Linear regression is the simplest but possibly the most fundamental model, and uses the good old: 
 
-## y = mx + b
+`y = mx + b`
 
-where m is the slope of the line and b is the y intercept
+Which describes a line with slope `m` and y-intercept `b`.
 
-we know x and y from our dataset, so how do we find m and b? the most common method is called 'ordinary least squares' (OLS):
+One way of calculating `m` and `b` is called the 'ordinary least squares' method:
 
-1. choose, or randomise values for both m and b, to create an example line
-2. measure the vertical distance between each data point and the example line. these distances are called 'errors'
+1. Randomise values for both m and b to create an example line
+2. Find the distance between the example line and each value in the dataset. These distances are called 'errors':
 
 <img src="./docs/ols.png">
 
-3. next, we sum the squares of these errors:
+3. Sum the squares of these errors:
 
-\frac{error_1^2+error_2^2+\dotsb+error_n^2}{n} 
+<p align="center">
+<img src="./docs/eq0.png">
+</p>
 
-now, we adjust (train) the values of m and b until we minimize this sum!
+Now, we iteratively adjust the values of `m` and `b` in order to minimize this sum. A popular and general optimization technique to find local minima is called _gradient descent_, but that's a topic for another day :)
 
-this process, of iteratively optimizing some value or parameter is called _gradient descent_, and is a ubiquitous technique within machine learning, including _deep learning_. 
+The accuracy and performance of linear regression is dependant on its **assumptions**:
 
-let's think about gradient descent geometrically - imagine a point on a turbulent geometric shape in 3d space:
+- **Linearity**: there is a linear relationship between the dependant variable and the independant variable(s)
+- **Normality**: your variables are distributed normally
+- **No multicollinearity**: your independant variables should not be predictors of eachother
+- **No auto-correlation**: a fancy way of saying your variables should not depend on themselves, i.e they are not values in a time series, e.g. the S&P 500, for example
 
-<img src="./docs/gradient-descent.jpg">
-
-To reach the local minimum value algorithmically, you must steps toward a downward direction. but what if the topology has descents of varying steepness? how do you know in what direction to step toward? this problems 
-
-
-### Linear Regression assumptions
-like all machine learning models, linear regression doesn't work in all situations, and its performance is based its assumptions. you can basically think of these assumptions as 'requirements' for linear regression to work effectively:
-
-- **Linearity:** there is a linear relationship between the dependant variable and the independant variable
-- **Normality:** your variables are distributed normally - think bell curves
-- **No multicollinearity:** your independant variables should not be able to be predicted by eachother
-- **No auto-correlation:** Auto-correlation means that a variable depends on itself or some 
-- **Homoscedasticity:** is an unnecessarily flashy word that means the errors (refer to figure 1) have a constant variance for each value of the independant variable
-
-
-other things to keep in mind:
-- Extrapolation is super unpredictable
-- Avoid spurious correlations by reasoning for why two variables may be functionally related
-- Outliers may throw off regression lines
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Pitfalls**:
+- Extrapolation beyond the model can quickly become very inaccurate
+- Extreme outliers can throw off the model 
 
 
