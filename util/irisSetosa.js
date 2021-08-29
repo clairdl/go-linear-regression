@@ -2,7 +2,7 @@ const csv = require('csv-parse');
 const createCsvWriter = require('csv-writer').createArrayCsvWriter;
 
 const fs = require('fs');
-const outPath = '../iris-setosa.csv';
+const outPath = '../iris_setosa.csv';
 
 let res = [];
 
