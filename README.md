@@ -1,12 +1,12 @@
-## Regression in go
+## Regression in Go (my unfinished notes)
 
-### Intro
+### define regression:
 
 Regression is the process of statistically modelling the relationship between a dependent variable and _n_ independent variables, which enables us to predict new values. Regression techniques are generally concerned with predicting continous values, as opposed to a discreet set of categories.
 
 ### 1. Linear Regression
 
-Linear regression is the simplest but possibly the most fundamental model, and uses the classic equation:
+Possibly the most fundamental statistical model, linear regression uses the classic:
 
 `y = mx + b`
 
@@ -37,3 +37,6 @@ The accuracy and performance of linear regression is dependant on its **assumpti
 **Pitfalls**:
 - Extrapolation beyond the model can quickly become very inaccurate
 - Extreme outliers can throw off the model 
+
+
+*'twas here i got bored of writing notes*
