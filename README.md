@@ -1,18 +1,18 @@
-# Regression in go
+## Regression in go
 
 ### Intro
 
-Regression is the process of statistically modelling the relationship between _n_ variables from known data points, which enables us to predict unknown values. Regression techniques are generally concerned with predicting continous values, as opposed to a discreet set of categories.
+Regression is the process of statistically modelling the relationship between a dependent variable and _n_ independent variables, which enables us to predict new values. Regression techniques are generally concerned with predicting continous values, as opposed to a discreet set of categories.
 
-### Linear regression
+### 1. Linear Regression
 
-Linear regression is the simplest but possibly the most fundamental model, and uses the good old: 
+Linear regression is the simplest but possibly the most fundamental model, and uses the classic equation:
 
 `y = mx + b`
 
-Which describes a line with slope `m` and y-intercept `b`.
+Which describes a line with gradient `m` and y-intercept `b`.
 
-One way of calculating `m` and `b` is called the 'ordinary least squares' method:
+One way of calculating `m` and `b` is with [ordinary least squares](https://en.wikipedia.org/wiki/Ordinary_least_squares) method:
 
 1. Randomise values for both m and b to create an example line
 2. Find the distance between the example line and each value in the dataset. These distances are called 'errors':
@@ -25,17 +25,15 @@ One way of calculating `m` and `b` is called the 'ordinary least squares' method
 <img src="./docs/eq0.png">
 </p>
 
-Now, we iteratively adjust the values of `m` and `b` in order to minimize this sum. A popular and general optimization technique to find local minima is called _gradient descent_, but that's a topic for another day :)
+Now, we iteratively adjust the values of `m` and `b` in order to minimize this sum. A ubiquitous optimization technique to find local minima is called _gradient descent_, but that's a topic for another day :)
 
 The accuracy and performance of linear regression is dependant on its **assumptions**:
 
 - **Linearity**: there is a linear relationship between the dependant variable and the independant variable(s)
 - **Normality**: your variables are distributed normally
 - **No multicollinearity**: your independant variables should not be predictors of eachother
-- **No auto-correlation**: a fancy way of saying your variables should not depend on themselves, i.e they are not values in a time series, e.g. the S&P 500, for example
+- **No auto-correlation**: a fancy way of saying your variables should not depend on themselves, i.e they are not values in a time series; Tesla's share price, for example
 
 **Pitfalls**:
 - Extrapolation beyond the model can quickly become very inaccurate
 - Extreme outliers can throw off the model 
-
-
