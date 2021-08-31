@@ -1,7 +1,7 @@
 # why?
 - i wanted to kill two birds with one stone and do **machine learning** in **golang**, so i chose a simple statistical concept everyone knows and loves
 - turns out the problem wasn't with understanding ml/stats concepts, but with actually writing code in go
-- now i understand why we use python for data science :) [(hint)](https://pandas.pydata.org/)
+- now i understand why we use python for data science :) [(hint)](https://pandas.pydata.org/) 
 
 ## Regression in Go (unfinished notes/tut)
 
