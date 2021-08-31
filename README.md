@@ -1,4 +1,9 @@
-## Regression in Go (my unfinished notes)
+# why?
+- i wanted to kill two birds with one stone and do **machine learning** in **golang**, so i chose a simple statistical concept everyone knows and loves
+- turns out the problem wasn't with understanding ml/stats concepts, but with actually writing code in go
+- now i understand why we use python for data science :) [(hint)](https://pandas.pydata.org/)
+
+## Regression in Go (unfinished notes/tut)
 
 ### define regression:
 
@@ -36,7 +41,7 @@ The accuracy and performance of linear regression is dependant on its **assumpti
 
 **Pitfalls**:
 - Extrapolation beyond the model can quickly become very inaccurate
-- Extreme outliers can throw off the model 
+- Extreme outliers can throw off the model
 
 
-*'twas here i got bored of writing notes*
+*'twas here i realised that i was only writing notes to escape having to debug*
