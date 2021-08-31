@@ -44,4 +44,4 @@ The accuracy and performance of linear regression is dependant on its **assumpti
 - Extreme outliers can throw off the model
 
 
-*'twas here i realised that i was only writing notes to escape having to debug*
+*'twas here i realised i was only writing notes to escape debugging :)*
