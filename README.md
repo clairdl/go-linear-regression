@@ -42,4 +42,4 @@ The accuracy and performance of linear regression is dependant on its **assumpti
 - Extrapolation beyond the model can quickly become very inaccurate
 - Extreme outliers can throw off the model
 
-cba
+incomplete (cba)
