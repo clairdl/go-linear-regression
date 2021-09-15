@@ -1,6 +1,6 @@
 # why?
 - i _tried_ to kill two birds with one stone and do **machine learning** in **golang**
-- at least now i understand [why we use python](https://pandas.pydata.org/) for data science :)
+- at least now i understand [why we use python](https://pandas.pydata.org/) for data science :D
 
 ## Regression in Go (unfinished notes/tut)
 
@@ -42,5 +42,4 @@ The accuracy and performance of linear regression is dependant on its **assumpti
 - Extrapolation beyond the model can quickly become very inaccurate
 - Extreme outliers can throw off the model
 
-
-*'twas here i realised i was only writing notes to escape debugging :)*
+cba
