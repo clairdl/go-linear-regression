@@ -8,8 +8,6 @@
 
 Ah, regression. The statistical process of modelling relationships between a dependent variables and independent variable(s), enabling us to predict new values. Note that regression techniques are generally concerned with predicting continous values, as opposed to a discreet set of categories.
 
-The _most_ fundament regression technique
-
 ### Linear regression
 
 This brings us to possibly the most fundamental model, linear regression, expressed with the battle tested equation:
